@@ -10,7 +10,7 @@
 - 更新源：
   `https://github.com/eyx323539-dev/CodexPlusPlus/releases/latest/download/latest.json`
 
-用户只有安装 `v1.2.38-bro.1` 或之后版本，软件内“检查更新”才会走 BRO 自己的 GitHub Release。旧版安装包仍可能指向原作者更新源。
+用户只有安装 `v1.2.38-bro.1` 或之后版本，软件内“检查更新”才会走 BRO 自己的 GitHub Release。更早的安装包仍可能指向旧更新源。
 
 ## 已完成的 BRO 定制内容
 
@@ -268,9 +268,9 @@ curl.exe -L "https://github.com/$repo/releases/latest/download/latest.json"
 
 ## 如果以后要同步上游
 
-现在本仓库是从源码 zip 初始化的，不是标准 fork。以后如果要同步原作者新版本，推荐流程：
+现在本仓库是从源码 zip 初始化的，不是标准 fork。以后如果要同步上游新版本，推荐流程：
 
-1. 单独下载原作者最新版源码
+1. 单独下载上游最新版源码
 2. 对比当前 BRO 改动
 3. 重新套用 BRO 广告、logo、更新源、供应商预设
 4. 重新测试和发布

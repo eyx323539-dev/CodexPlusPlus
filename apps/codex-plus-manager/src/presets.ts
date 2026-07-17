@@ -1,10 +1,7 @@
 /**
  * Codex++ 供应商预设
- * 基于 cc-switch (MIT) 的 codexProviderPresets.ts，作者 Jason Young
- * https://github.com/farion1231/cc-switch
  *
  * 提供一键填充供应商配置的预设模板，包括 Base URL、协议、模型列表等。
- * 去掉了 cc-switch 原始的商业合作标记（isPartner、partnerPromotionKey）。
  */
 
 export type PresetCategory = "official" | "aggregator" | "third_party" | "cn_official";
@@ -173,16 +170,6 @@ export const PRESETS: ProviderPreset[] = [
     model: "gpt-5.5",
   },
   {
-    id: "runapi",
-    name: "RunAPI",
-    websiteUrl: "https://runapi.co",
-    apiKeyUrl: "https://runapi.co",
-    category: "aggregator",
-    baseUrl: "https://runapi.co/v1",
-    protocol: "responses",
-    model: "gpt-5.5",
-  },
-  {
     id: "siliconflow",
     name: "SiliconFlow",
     websiteUrl: "https://siliconflow.cn",
@@ -211,16 +198,6 @@ export const PRESETS: ProviderPreset[] = [
     protocol: "responses",
     model: "gpt-5.5",
     websiteUrl: "https://aihubmix.com",
-  },
-  {
-    id: "apikeyfun",
-    name: "APIKEY.FUN",
-    category: "aggregator",
-    baseUrl: "https://api.apikey.fun/v1",
-    protocol: "responses",
-    model: "gpt-5.5",
-    modelList: ["gpt-5.5"],
-    websiteUrl: "https://apikey.fun",
   },
   {
     id: "pateway",
