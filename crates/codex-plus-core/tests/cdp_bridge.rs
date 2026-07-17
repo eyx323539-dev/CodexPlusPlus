@@ -1,4 +1,4 @@
-use base64::Engine;
+﻿use base64::Engine;
 use codex_plus_core::assets;
 use codex_plus_core::bridge::{self, BRIDGE_BINDING_NAME};
 use codex_plus_core::cdp::{
@@ -50,8 +50,8 @@ fn injection_script_prefixes_helper_url_and_sponsor_images() {
     assert!(script.contains("window.__CODEX_PLUS_SPONSOR_IMAGES__"));
     assert!(script.contains("window.__CODEX_PLUS_VERSION__"));
     assert!(script.contains(codex_plus_core::version::VERSION));
-    assert!(script.contains("https://discord.gg/y96kX7A76v"));
-    assert!(script.contains("data-codex-plus-discord"));
+    assert!(script.contains("https://github.com/eyx323539-dev/CodexPlusPlus"));
+    assert!(!script.contains("data-codex-plus-discord"));
 }
 
 #[test]
@@ -355,8 +355,8 @@ fn injection_script_fetches_ads_without_bridge() {
 
     assert!(script.contains("directFetchCodexPlusAds"));
     assert!(script.contains("cacheBustCodexPlusAdUrl"));
-    assert!(script.contains("Date.now()"));
-    assert!(script.contains("BigPizzaV3/Ad-List"));
+    assert!(script.contains("BRO API 中转站"));
+    assert!(script.contains("https://api.skuzi.cn/"));
     assert!(
         !script.contains("codexPlusAds = normalizeCodexPlusAds(await postJson(\"/ads\", {}));")
     );
@@ -2379,3 +2379,4 @@ fn noop_handler() -> bridge::BridgeHandler {
             as Pin<Box<dyn Future<Output = anyhow::Result<serde_json::Value>> + Send>>
     })
 }
+

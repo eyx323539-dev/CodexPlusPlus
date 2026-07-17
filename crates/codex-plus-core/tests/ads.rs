@@ -1,4 +1,4 @@
-use std::io::{Read, Write};
+﻿use std::io::{Read, Write};
 use std::net::TcpListener;
 use std::thread;
 
@@ -8,12 +8,12 @@ use codex_plus_core::ads::{
 use serde_json::json;
 
 #[test]
-fn default_ad_urls_match_legacy_helper_sources() {
+fn default_ad_urls_match_bro_sources() {
     assert_eq!(
         DEFAULT_AD_LIST_URLS,
         [
-            "https://raw.githubusercontent.com/BigPizzaV3/Ad-List/main/ads.json",
-            "https://cdn.jsdelivr.net/gh/BigPizzaV3/Ad-List@main/ads.json",
+            "https://api.skuzi.cn/codexplusplus/ads.json",
+            "https://api.skuzi.cn/ads.json",
         ]
     );
 }
@@ -113,111 +113,30 @@ fn builtin_sponsor_is_appended_after_remote_sponsors() {
 }
 
 #[test]
-fn normalizes_known_remote_sponsors_with_local_logos() {
+fn normalizes_bro_sponsor_with_local_logo() {
     let payload = normalize_ad_payload(json!({
         "version": 1,
         "ads": [
             {
-                "id": "volcengine-ark-agent-plan",
+                "id": "bro-api",
                 "type": "sponsor",
-                "title": "火山方舟",
+                "title": "BRO API 中转站",
                 "description": "远端推荐内容",
-                "url": "https://example.test/volcengine"
-            },
-            {
-                "id": "0029-token-bridge",
-                "type": "sponsor",
-                "title": "PackyCode",
-                "description": "远端推荐内容",
-                "url": "https://example.test/0029"
-            },
-            {
-                "id": "0055-token-bridge",
-                "type": "sponsor",
-                "title": "Token 云桥",
-                "description": "远端推荐内容",
-                "url": "https://example.test/0055"
-            },
-            {
-                "id": "apikey-fun-ai-relay",
-                "type": "sponsor",
-                "title": "APIKEY.FUN",
-                "description": "远端推荐内容",
-                "url": "https://example.test/apikey"
-            },
-            {
-                "id": "rawchat-codex-relay",
-                "type": "sponsor",
-                "title": "RawChat",
-                "description": "远端推荐内容",
-                "url": "https://example.test/rawchat"
-            },
-            {
-                "id": "runapi-openrouter-alternative",
-                "type": "sponsor",
-                "title": "RunAPI",
-                "description": "远端推荐内容",
-                "url": "https://example.test/runapi"
-            },
-            {
-                "id": "baikewei-ai",
-                "type": "sponsor",
-                "title": "百可为AI",
-                "description": "远端推荐内容",
-                "url": "https://example.test/baikewei"
-            },
-            {
-                "id": "jojocode-codex-relay",
-                "type": "sponsor",
-                "title": "JOJO Code",
-                "description": "远端推荐内容",
-                "url": "https://example.test/jojocode",
-                "image": "https://example.test/logo.png"
+                "url": "https://example.test/bro-api"
             }
         ]
     }));
     let ads = payload["ads"].as_array().unwrap();
-
-    for id in [
-        "volcengine-ark-agent-plan",
-        "0029-token-bridge",
-        "apikey-fun-ai-relay",
-        "runapi-openrouter-alternative",
-    ] {
-        let ad = ads.iter().find(|ad| ad["id"] == json!(id)).unwrap();
-        assert!(
-            ad["image"]
-                .as_str()
-                .unwrap()
-                .starts_with("data:image/png;base64,"),
-            "{id}"
-        );
-    }
-    let baikewei = ads
+    let bro_api = ads
         .iter()
-        .find(|ad| ad["id"] == json!("baikewei-ai"))
+        .find(|ad| ad["id"] == json!("bro-api"))
         .unwrap();
     assert!(
-        baikewei["image"]
+        bro_api["image"]
             .as_str()
             .unwrap()
-            .starts_with("data:image/jpeg;base64,")
+            .starts_with("data:image/png;base64,")
     );
-    for id in ["0055-token-bridge", "rawchat-codex-relay"] {
-        let ad = ads.iter().find(|ad| ad["id"] == json!(id)).unwrap();
-        assert!(
-            ad["image"]
-                .as_str()
-                .unwrap()
-                .starts_with("data:image/svg+xml;base64,"),
-            "{id}"
-        );
-    }
-    let jojocode = ads
-        .iter()
-        .find(|ad| ad["id"] == json!("jojocode-codex-relay"))
-        .unwrap();
-    assert_eq!(jojocode["image"], json!("https://example.test/logo.png"));
 }
 
 #[tokio::test]
@@ -279,3 +198,5 @@ async fn fetch_ad_list_tries_backup_url_when_primary_fails() {
     assert!(ads.iter().any(|ad| ad["id"] == json!("bro-api")));
     assert!(ads.iter().any(|ad| ad["id"] == json!("backup-ad")));
 }
+
+

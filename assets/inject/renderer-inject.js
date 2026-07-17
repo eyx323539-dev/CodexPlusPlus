@@ -2524,25 +2524,19 @@
   }
 
   async function directFetchCodexPlusAds() {
-    const urls = [
-      "https://raw.githubusercontent.com/BigPizzaV3/Ad-List/main/ads.json",
-      "https://cdn.jsdelivr.net/gh/BigPizzaV3/Ad-List@main/ads.json",
-    ];
-    let lastError = null;
-    const cacheBust = Date.now();
-    for (const url of urls) {
-      try {
-        const response = await fetch(cacheBustCodexPlusAdUrl(url, cacheBust), {
-          headers: { "Accept": "application/json" },
-          cache: "no-store",
-        });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        return await response.json();
-      } catch (error) {
-        lastError = error;
-      }
-    }
-    throw lastError || new Error("ad list unavailable");
+    return {
+      version: 1,
+      ads: [
+        {
+          id: "bro-api",
+          type: "sponsor",
+          title: "BRO API 中转站",
+          description: "BRO API 提供稳定、便捷的 AI API 中转服务，支持 Codex、GPT、Claude、Gemini 等常用模型，欢迎开发者注册体验。",
+          url: "https://api.skuzi.cn/",
+          highlights: ["Codex / GPT", "Claude / Gemini", "稳定 API 中转"],
+        },
+      ],
+    };
   }
 
   async function fetchCodexPlusAds() {
@@ -2731,17 +2725,8 @@
             </div>
           </div>
           <div class="codex-plus-panel" data-codex-plus-panel="support" hidden>
-            <div class="codex-plus-sponsor-text">如果 Codex++ 帮到了你，可以请我喝杯咖啡，或者随手赞赏支持一下继续维护。</div>
-            <div class="codex-plus-sponsor-grid">
-              <div class="codex-plus-sponsor-card">
-                <div class="codex-plus-sponsor-card-title">支付宝</div>
-                <img class="codex-plus-sponsor-qr" src="${window.__CODEX_PLUS_SPONSOR_IMAGES__?.alipay || `${helperBase}/assets/sponsor-alipay.jpg`}" alt="支付宝赞赏码">
-              </div>
-              <div class="codex-plus-sponsor-card">
-                <div class="codex-plus-sponsor-card-title">微信</div>
-                <img class="codex-plus-sponsor-qr" src="${window.__CODEX_PLUS_SPONSOR_IMAGES__?.wechat || `${helperBase}/assets/sponsor-wechat.jpg`}" alt="微信赞赏码">
-              </div>
-            </div>
+            <div class="codex-plus-sponsor-text">BRO API 中转站：稳定、便捷的 AI API 中转服务。</div>
+            <button type="button" class="codex-plus-action-button" data-codex-plus-bro-api="true">打开 BRO API</button>
           </div>
         </div>
       </div>
@@ -2783,6 +2768,10 @@
       }
       if (target?.closest("[data-codex-open-manager]")) {
         openManagerFromCodex();
+        return;
+      }
+      if (target?.closest("[data-codex-plus-bro-api]")) {
+        window.open("https://api.skuzi.cn/", "_blank", "noopener,noreferrer");
         return;
       }
       const issueButton = target?.closest("[data-codex-plus-issue]");

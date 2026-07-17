@@ -1,21 +1,12 @@
 use serde_json::{Map, Value, json};
 use std::time::{SystemTime, UNIX_EPOCH};
 
-const VOLCENGINE_IMAGE: &[u8] = include_bytes!("../../../docs/images/sponsor-volcengine.png");
-const PACKYCODE_IMAGE: &[u8] = include_bytes!("../../../docs/images/sponsor-packycode.png");
-const TOKEN_BRIDGE_IMAGE: &[u8] = include_bytes!("../../../docs/images/sponsor-0029.svg");
-const APIKEY_FUN_IMAGE: &[u8] = include_bytes!("../../../docs/images/sponsor-apikey-fun.png");
-const RAWCHAT_IMAGE: &[u8] = include_bytes!("../../../docs/images/sponsor-rawchat.svg");
-const RUNAPI_IMAGE: &[u8] = include_bytes!("../../../docs/images/sponsor-runapi.png");
-const BAIKEWEI_AI_IMAGE: &[u8] = include_bytes!("../../../docs/images/sponsor-baikewei-ai.jpg");
-const CUBENCE_IMAGE: &[u8] = include_bytes!("../../../docs/images/sponsor-cubence.png");
-const ERGOU_API_IMAGE: &[u8] = include_bytes!("../../../docs/images/sponsor-ergou-api.png");
 const BRO_API_IMAGE: &[u8] = include_bytes!("../../../docs/images/sponsor-bro-api.png");
 const BUILTIN_SPONSOR_EXPIRES_AT: &str = "2026-08-02T23:59:59+08:00";
 
 pub const DEFAULT_AD_LIST_URLS: [&str; 2] = [
-    "https://raw.githubusercontent.com/BigPizzaV3/Ad-List/main/ads.json",
-    "https://cdn.jsdelivr.net/gh/BigPizzaV3/Ad-List@main/ads.json",
+    "https://api.skuzi.cn/codexplusplus/ads.json",
+    "https://api.skuzi.cn/ads.json",
 ];
 
 pub fn normalize_ad_payload(payload: Value) -> Value {
@@ -66,13 +57,7 @@ fn fill_known_remote_logos(ads: &mut [Value]) {
 
 fn known_remote_logo(id: &str) -> Option<(&'static str, &'static [u8])> {
     match id {
-        "volcengine-ark-agent-plan" => Some(("image/png", VOLCENGINE_IMAGE)),
-        "0029-token-bridge" => Some(("image/png", PACKYCODE_IMAGE)),
-        "0055-token-bridge" => Some(("image/svg+xml", TOKEN_BRIDGE_IMAGE)),
-        "apikey-fun-ai-relay" => Some(("image/png", APIKEY_FUN_IMAGE)),
-        "rawchat-codex-relay" => Some(("image/svg+xml", RAWCHAT_IMAGE)),
-        "runapi-openrouter-alternative" => Some(("image/png", RUNAPI_IMAGE)),
-        "baikewei-ai" => Some(("image/jpeg", BAIKEWEI_AI_IMAGE)),
+        "bro-api" => Some(("image/png", BRO_API_IMAGE)),
         _ => None,
     }
 }

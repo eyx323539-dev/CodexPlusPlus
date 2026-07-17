@@ -17,7 +17,7 @@
 - 首页广告卡片改为 `BRO API 中转站`
 - 首页广告按钮链接改为 `https://api.skuzi.cn/`
 - 首页广告小图标改为 BRO logo
-- 供应商预设里的 JOJO Code 改为 `BRO API 中转站`
+- 供应商预设改为 `BRO API 中转站`
 - core 内置广告改为 BRO API
 - 更新检查源改为 BRO 自己的 GitHub 仓库
 - 安装包 Publisher 改为 `BRO API`
@@ -283,4 +283,3 @@ curl.exe -L "https://github.com/$repo/releases/latest/download/latest.json"
 - `crates/codex-plus-core/src/ads.rs`
 - `docs/images/sponsor-bro-api.png`
 - `apps/codex-plus-manager/src/bro-api-logo.png`
-

@@ -1,4 +1,4 @@
-import assert from "node:assert/strict";
+﻿import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import { isGitHubRepositoryHomepage } from "./github-repository.ts";
 
@@ -8,7 +8,7 @@ describe("GitHub repository homepage detection", () => {
       "https://github.com/0xTotoroX/codex-hide-usage-alert",
       "https://www.github.com/0xTotoroX/tux-toolbar-buddy/",
       "https://github.com/0xTotoroX/codex-hide-usage-alert.git",
-      "https://github.com/BigPizzaV3/CodexPlusPlus?tab=readme-ov-file#readme",
+      "https://github.com/eyx323539-dev/CodexPlusPlus?tab=readme-ov-file#readme",
     ];
 
     for (const url of urls) assert.equal(isGitHubRepositoryHomepage(url), true, url);
@@ -42,3 +42,4 @@ describe("GitHub repository homepage detection", () => {
     for (const url of urls) assert.equal(isGitHubRepositoryHomepage(url), false, url);
   });
 });
+

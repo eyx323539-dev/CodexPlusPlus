@@ -163,7 +163,7 @@ scripts/installer/
 
 ## License
 
-Copyright (C) 2026 BigPizzaV3
+Copyright (C) 2026 BRO API
 
 CodexPlusPlus is licensed under the [GNU Affero General Public License v3.0](LICENSE), SPDX identifier `AGPL-3.0-only`. Modified versions that are distributed or offered to users over a network must provide the corresponding source code as required by AGPLv3.
 

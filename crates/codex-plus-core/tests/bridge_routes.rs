@@ -1,4 +1,4 @@
-use std::sync::{Arc, Mutex};
+﻿use std::sync::{Arc, Mutex};
 
 use async_trait::async_trait;
 use codex_plus_core::launcher::{
@@ -816,7 +816,7 @@ fn script_market_manifest_filters_invalid_entries() {
                 "name": "Demo",
                 "description": "Useful demo",
                 "version": "1.0.0",
-                "author": "BigPizzaV3",
+                "author": "BRO API",
                 "tags": ["ui", 42],
                 "homepage": "https://example.com/demo",
                 "script_url": "https://example.com/demo.js",
@@ -854,7 +854,7 @@ fn user_script_inventory_includes_market_metadata() {
             name: "Demo".to_string(),
             description: "Useful demo".to_string(),
             version: "1.0.0".to_string(),
-            author: "BigPizzaV3".to_string(),
+            author: "BRO API".to_string(),
             tags: vec!["ui".to_string()],
             homepage: "https://example.com/demo".to_string(),
             script_url: "https://example.com/demo.js".to_string(),
@@ -1444,3 +1444,4 @@ impl LaunchHooks for ContextHooks {
 
     async fn terminate_codex(&self, _launch: &CodexLaunch) {}
 }
+

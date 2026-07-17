@@ -1,4 +1,4 @@
-import {
+﻿import {
   closestCenter,
   DndContext,
   KeyboardSensor,
@@ -272,7 +272,7 @@ type RelayProtocol = "responses" | "chatCompletions";
 type RelayMode = "official" | "mixedApi" | "pureApi" | "aggregate";
 const PROTOCOL_PROXY_BASE_URL = "http://127.0.0.1:57321/v1";
 const CHAT_UPSTREAM_BASE_URL_KEY = "codex_plus_chat_base_url";
-const SCRIPT_MARKET_REPOSITORY_URL = "https://github.com/BigPizzaV3/CodexPlusPlusScriptMarket";
+const SCRIPT_MARKET_REPOSITORY_URL = "https://github.com/eyx323539-dev/CodexPlusPlusScriptMarket";
 
 const emptyContextSelection = (): RelayContextSelection => ({
   mcpServers: [],
@@ -2453,11 +2453,11 @@ function OverviewScreen({
   const health = healthItems(overview);
   return (
     <>
-      <Panel className="jojocode-overview">
+      <Panel className="bro-api-overview">
         <CardContent>
-          <div className="jojocode-overview-layout">
-              <div className="jojocode-overview-main">
-                <div className="jojocode-overview-mark">
+          <div className="bro-api-overview-layout">
+              <div className="bro-api-overview-main">
+                <div className="bro-api-overview-mark">
                   <img alt="BRO API" src={broApiLogo} />
               </div>
               <div>
@@ -2468,8 +2468,8 @@ function OverviewScreen({
                 </p>
               </div>
             </div>
-            <div className="jojocode-overview-side">
-              <div className="jojocode-model-tags">
+            <div className="bro-api-overview-side">
+              <div className="bro-api-model-tags">
                 <span>Codex</span>
                 <span>GPT</span>
                 <span>Claude</span>
@@ -3439,12 +3439,12 @@ function RecommendationsScreen({ ads, actions }: { ads: AdsResult | null; action
   return (
     <>
       <Panel>
-        <CardHead title={t("推荐内容")} detail={t("与 Codex 内插件菜单使用同一个远端广告源")} />
+        <CardHead title={t("推荐内容")} detail={t("BRO API 推荐内容")} />
         <CardContent>
           <div className="recommend-hero">
             <div>
               <strong>{ads ? tf("已加载 {0} 条推荐", [items.length]) : t("尚未加载推荐内容")}</strong>
-              <span>{t("内容来自 BigPizzaV3/Ad-List，分为赞助商推荐和普通推荐。")}</span>
+              <span>{t("当前仅展示 BRO API 中转站推荐。")}</span>
             </div>
             <Button onClick={() => void actions.refreshAds()}>
               <RefreshCw className="h-4 w-4" />
@@ -7395,3 +7395,5 @@ function loadInitialRoute(): Route {
   }
   return "overview";
 }
+
+

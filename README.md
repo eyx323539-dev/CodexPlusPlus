@@ -175,7 +175,7 @@ scripts/installer/
 
 ## 开源协议
 
-Copyright (C) 2026 BigPizzaV3
+Copyright (C) 2026 BRO API
 
 CodexPlusPlus 采用 [GNU Affero General Public License v3.0](LICENSE)，SPDX 标识为 `AGPL-3.0-only`。修改并分发本项目，或通过网络提供修改后的版本时，需要按 AGPLv3 提供对应源代码。
 

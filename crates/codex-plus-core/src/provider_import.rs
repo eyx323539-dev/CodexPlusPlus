@@ -1,4 +1,4 @@
-use crate::settings::{RelayMode, RelayProfile, RelayProtocol, SettingsStore};
+﻿use crate::settings::{RelayMode, RelayProfile, RelayProtocol, SettingsStore};
 use anyhow::Context;
 use base64::Engine;
 use std::path::Path;
@@ -383,12 +383,12 @@ mod tests {
 
     #[test]
     fn parses_codexplusplus_provider_url() {
-        let url = "codexplusplus://v1/import/provider?resource=provider&name=JOJO%20Code&baseUrl=https%3A%2F%2Fjojocode.com%2Fv1&apiKey=sk-test&wireApi=responses&relayMode=pureApi&configContents=bW9kZWxfcHJvdmlkZXIgPSAiQ29kZXhQbHVzUGx1cyIK&authContents=eyJPUEVOQUlfQVBJX0tFWSI6InNrLXRlc3QifQo%3D";
+        let url = "codexplusplus://v1/import/provider?resource=provider&name=BRO%20API%20%E4%B8%AD%E8%BD%AC%E7%AB%99&baseUrl=https%3A%2F%2Fapi.skuzi.cn%2Fv1&apiKey=sk-test&wireApi=responses&relayMode=pureApi&configContents=bW9kZWxfcHJvdmlkZXIgPSAiQ29kZXhQbHVzUGx1cyIK&authContents=eyJPUEVOQUlfQVBJX0tFWSI6InNrLXRlc3QifQo%3D";
 
         let request = request_from_url(url).unwrap();
 
-        assert_eq!(request.name, "JOJO Code");
-        assert_eq!(request.base_url, "https://jojocode.com/v1");
+        assert_eq!(request.name, "BRO API 中转站");
+        assert_eq!(request.base_url, "https://api.skuzi.cn/v1");
         assert_eq!(request.api_key, "sk-test");
         assert_eq!(request.wire_api, "responses");
         assert_eq!(request.relay_mode, "pureApi");
@@ -401,8 +401,8 @@ mod tests {
         let dir = tempfile::tempdir().unwrap();
         let store = SettingsStore::new(dir.path().join("settings.json"));
         let request = ProviderImportRequest {
-            name: "JOJO Code".to_string(),
-            base_url: "https://jojocode.com/v1/".to_string(),
+            name: "BRO API 中转站".to_string(),
+            base_url: "https://api.skuzi.cn/v1/".to_string(),
             api_key: "sk-test".to_string(),
             wire_api: "responses".to_string(),
             relay_mode: "pureApi".to_string(),
@@ -426,7 +426,7 @@ mod tests {
         assert_eq!(settings.relay_profiles[1].relay_mode, RelayMode::PureApi);
         assert_eq!(
             settings.relay_profiles[1].upstream_base_url,
-            "https://jojocode.com/v1"
+            "https://api.skuzi.cn/v1"
         );
     }
 
@@ -435,8 +435,8 @@ mod tests {
         let dir = tempfile::tempdir().unwrap();
         let path = dir.path().join("pending-provider-import.json");
         let request = ProviderImportRequest {
-            name: "JOJO Code".to_string(),
-            base_url: "https://jojocode.com/v1".to_string(),
+            name: "BRO API 中转站".to_string(),
+            base_url: "https://api.skuzi.cn/v1".to_string(),
             api_key: "sk-test".to_string(),
             wire_api: "responses".to_string(),
             relay_mode: "pureApi".to_string(),
@@ -448,8 +448,8 @@ mod tests {
         let pending = load_pending_provider_import_at(&path).unwrap().unwrap();
         clear_pending_provider_import_at(&path).unwrap();
 
-        assert_eq!(pending.name, "JOJO Code");
-        assert_eq!(pending.base_url, "https://jojocode.com/v1");
+        assert_eq!(pending.name, "BRO API 中转站");
+        assert_eq!(pending.base_url, "https://api.skuzi.cn/v1");
         assert!(load_pending_provider_import_at(&path).unwrap().is_none());
     }
 
@@ -461,8 +461,8 @@ mod tests {
         save_pending_provider_import_at(
             &pending_path,
             &ProviderImportRequest {
-                name: "JOJO Code".to_string(),
-                base_url: "https://jojocode.com/v1".to_string(),
+                name: "BRO API 中转站".to_string(),
+                base_url: "https://api.skuzi.cn/v1".to_string(),
                 api_key: "sk-test".to_string(),
                 wire_api: "responses".to_string(),
                 relay_mode: "pureApi".to_string(),
@@ -484,3 +484,4 @@ mod tests {
         );
     }
 }
+
