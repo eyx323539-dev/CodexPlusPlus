@@ -447,10 +447,16 @@ body {
   place-items: center;
   width: 42px;
   height: 42px;
-  border: 1px solid hsl(var(--brand-accent) / 0.38);
+  border: 1px solid hsl(var(--brand-accent) / 0.2);
   border-radius: 8px;
-  background: hsl(var(--brand-accent) / 0.16);
-  color: hsl(var(--brand-accent));
+  background: hsl(var(--background));
+  overflow: hidden;
+}
+
+.jojocode-overview-mark img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
 }
 
 .jojocode-overview h2 {
@@ -3747,10 +3753,9 @@ select {
 }
 
 .jojocode-overview-mark {
-  border-color: hsl(var(--brand-accent) / 0.28);
+  border-color: hsl(var(--brand-accent) / 0.2);
   border-radius: 8px;
-  background: hsl(var(--brand-accent) / 0.1);
-  color: hsl(var(--brand-accent));
+  background: hsl(var(--background));
 }
 
 .jojocode-model-tags span,

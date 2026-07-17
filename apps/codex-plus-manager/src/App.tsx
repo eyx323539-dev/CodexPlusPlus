@@ -74,6 +74,7 @@ import {
 } from "./model-windows";
 import { resolveProviderSyncCompletion } from "./provider-sync-flow";
 import { getLanguage, t, tf, toggleLanguage } from "@/i18n";
+import broApiLogo from "./bro-api-logo.png";
 
 const isWindowsPlatform = /\bWindows\b/i.test(navigator.userAgent);
 
@@ -2455,9 +2456,9 @@ function OverviewScreen({
       <Panel className="jojocode-overview">
         <CardContent>
           <div className="jojocode-overview-layout">
-            <div className="jojocode-overview-main">
-              <div className="jojocode-overview-mark">
-                <Network className="h-5 w-5" />
+              <div className="jojocode-overview-main">
+                <div className="jojocode-overview-mark">
+                  <img alt="BRO API" src={broApiLogo} />
               </div>
               <div>
                 <span className="eyebrow">API &#20013;&#36716;&#31449;</span>
@@ -3610,14 +3611,14 @@ function AboutScreen({
           <div className="metric-list">
             <Metric label={t("Codex++ 版本")} value={overview?.current_version ?? update?.currentVersion ?? "-"} />
             <Metric label={t("Codex 版本")} value={overview?.codex_version ?? t("未检测到")} />
-            <Metric label={t("项目地址")} value="github.com/BigPizzaV3/CodexPlusPlus" />
+            <Metric label={t("项目地址")} value="github.com/eyx323539-dev/CodexPlusPlus" />
           </div>
           <Toolbar>
-            <Button onClick={() => void actions.openExternalUrl("https://github.com/BigPizzaV3/CodexPlusPlus")} variant="secondary">
+            <Button onClick={() => void actions.openExternalUrl("https://github.com/eyx323539-dev/CodexPlusPlus")} variant="secondary">
               <ExternalLink className="h-4 w-4" />
               {t("打开项目主页")}
             </Button>
-            <Button onClick={() => void actions.openExternalUrl("https://github.com/BigPizzaV3/CodexPlusPlus/issues")} variant="secondary">
+            <Button onClick={() => void actions.openExternalUrl("https://github.com/eyx323539-dev/CodexPlusPlus/issues")} variant="secondary">
               <ExternalLink className="h-4 w-4" />
               {t("反馈问题")}
             </Button>
