@@ -39,24 +39,14 @@ For first-time setup, open the manager, verify the detected app path, configure 
 ## Sponsors
 
 <p align="center">
-  <a href="https://api.skuzi.cn/">
+  <a href="https://api.skuzi.cn/" target="_blank" rel="noopener noreferrer">
     <img src="docs/images/sponsor-bro-api.png" alt="BRO API Relay" width="180">
   </a>
 </p>
 <p align="center">
-  <a href="https://api.skuzi.cn/"><strong>BRO API Relay</strong></a><br>
+  <a href="https://api.skuzi.cn/" target="_blank" rel="noopener noreferrer"><strong>BRO API Relay</strong></a><br>
   BRO API provides stable and convenient AI API relay service for Codex, GPT, Claude, Gemini, and other common models.
 </p>
-
-## Community and Support
-
-Join the Codex++ community (QQ group: 830629290) to report issues, share feedback, or suggest features.
-
-WeChat: <a href="https://docs.qq.com/doc/DQ2VOanZTTFZJcUpZ#">get the latest group QR code</a>.
-
-<img src="docs/images/discussion-group-qr.jpg" alt="Codex++ WeChat group QR code" width="260">
-
-Telegram: <https://t.me/CodexPlusPlus>
 
 ## Current Features
 

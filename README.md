@@ -39,24 +39,14 @@ Codex++ 是面向 OpenAI Codex / ChatGPT 桌面应用的外部启动器与管理
 ## 赞助商
 
 <p align="center">
-  <a href="https://api.skuzi.cn/">
+  <a href="https://api.skuzi.cn/" target="_blank" rel="noopener noreferrer">
     <img src="docs/images/sponsor-bro-api.png" alt="BRO API 中转站" height="110">
   </a>
 </p>
 <p align="center">
-  <a href="https://api.skuzi.cn/"><strong>BRO API 中转站</strong></a><br>
+  <a href="https://api.skuzi.cn/" target="_blank" rel="noopener noreferrer"><strong>BRO API 中转站</strong></a><br>
   BRO API 提供稳定、便捷的 AI API 中转服务，支持 Codex、GPT、Claude、Gemini 等常用模型，欢迎开发者注册体验。
 </p>
-## 交流与支持
-
-欢迎加入 Codex++ 交流群（QQ群：830629290），反馈问题、交流使用体验或提出新功能建议。
-
-微信群：<a href="https://docs.qq.com/doc/DQ2VOanZTTFZJcUpZ#">点击这里获取最新微信群二维码</a>。
-
-<img src="docs/images/discussion-group-qr.jpg" alt="Codex++ 微信群二维码" width="260">
-
-Telegram 频道：<https://t.me/CodexPlusPlus>
-
 ## 当前功能
 
 | 模块 | 功能 |
