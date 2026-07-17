@@ -9,9 +9,9 @@
 </p>
 
 <p align="center">
-  <img alt="Release" src="https://img.shields.io/github/v/release/BigPizzaV3/CodexPlusPlus">
-  <img alt="Stars" src="https://img.shields.io/github/stars/BigPizzaV3/CodexPlusPlus">
-  <img alt="License" src="https://img.shields.io/github/license/BigPizzaV3/CodexPlusPlus">
+  <img alt="Release" src="https://img.shields.io/github/v/release/eyx323539-dev/CodexPlusPlus">
+  <img alt="Stars" src="https://img.shields.io/github/stars/eyx323539-dev/CodexPlusPlus">
+  <img alt="License" src="https://img.shields.io/github/license/eyx323539-dev/CodexPlusPlus">
   <img alt="Rust" src="https://img.shields.io/badge/rust-1.85%2B-orange">
   <img alt="Tauri" src="https://img.shields.io/badge/tauri-2.x-24C8DB">
 </p>
@@ -20,11 +20,14 @@ Codex++ 是面向 OpenAI Codex / ChatGPT 桌面应用的外部启动器与管理
 
 ## 快速使用
 
-从 [GitHub Releases](https://github.com/BigPizzaV3/CodexPlusPlus/releases) 下载最新版安装包：
+从 [BRO Codex++ GitHub Releases](https://github.com/eyx323539-dev/CodexPlusPlus/releases/latest) 下载最新版安装包：
 
 - Windows：`CodexPlusPlus-*-windows-x64-setup.exe`
 - macOS Intel：`CodexPlusPlus-*-macos-x64.dmg`
 - macOS Apple Silicon：`CodexPlusPlus-*-macos-arm64.dmg`
+
+当前 BRO 定制版 Windows 安装包：
+[CodexPlusPlus-1.2.38-bro.1-windows-x64-setup.exe](https://github.com/eyx323539-dev/CodexPlusPlus/releases/latest/download/CodexPlusPlus-1.2.38-bro.1-windows-x64-setup.exe)
 
 安装后会有两个入口：
 
@@ -36,13 +39,13 @@ Codex++ 是面向 OpenAI Codex / ChatGPT 桌面应用的外部启动器与管理
 ## 赞助商
 
 <p align="center">
-  <a href="https://jojocode.com/">
-    <img src="docs/images/sponsor-jojocode.png" alt="JOJO Code" height="110">
+  <a href="https://api.skuzi.cn/">
+    <img src="docs/images/sponsor-bro-api.png" alt="BRO API 中转站" height="110">
   </a>
 </p>
 <p align="center">
-  <a href="https://jojocode.com/"><strong>JOJO Code｜Codex++ 官方中转站</strong></a><br>
-  Codex++ 官方中转站，主打稳定接入和划算价格，支持 GPT-5.6 全系列、Fable 5、Sonnet 5、GPT-5.5、GPT-5.4、Claude Opus 4.8、Claude Opus 4.7、gpt-image-2 等模型与图像能力，适合日常开发、团队协作和长期项目工作流。
+  <a href="https://api.skuzi.cn/"><strong>BRO API 中转站</strong></a><br>
+  BRO API 提供稳定、便捷的 AI API 中转服务，支持 Codex、GPT、Claude、Gemini 等常用模型，欢迎开发者注册体验。
 </p>
 
 <a href="mailto:1727532@qq.com">想显示在下方？</a>
@@ -55,11 +58,11 @@ Codex++ 是面向 OpenAI Codex / ChatGPT 桌面应用的外部启动器与管理
   </tr>
   <tr>
     <td align="center">
-      <a href="https://jojocode.com/">
-        <img src="docs/images/sponsor-jojocode.png" alt="JOJO Code" height="80">
+      <a href="https://api.skuzi.cn/">
+        <img src="docs/images/sponsor-bro-api.png" alt="BRO API 中转站" height="80">
       </a>
     </td>
-    <td><a href="https://jojocode.com/"><strong>JOJO Code｜Codex++ 官方中转站</strong></a><br>感谢 JOJO Code 赞助本项目。JOJO Code 是 Codex++ 官方中转站，提供价格划算、稳定易接入的 Codex API 中转服务，支持 GPT-5.6 全系列、Fable 5、Sonnet 5、GPT-5.5、GPT-5.4、Claude Opus 4.8、Claude Opus 4.7、gpt-image-2 等模型与图像能力，适合日常开发、快速配置、团队协作和长期使用。</td>
+    <td><a href="https://api.skuzi.cn/"><strong>BRO API 中转站</strong></a><br>BRO API 提供稳定、便捷的 AI API 中转服务，支持 Codex、GPT、Claude、Gemini 等常用模型，欢迎开发者注册体验。</td>
   </tr>
   <tr>
     <td align="center">

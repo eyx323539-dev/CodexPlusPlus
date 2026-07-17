@@ -9,9 +9,9 @@
 </p>
 
 <p align="center">
-  <img alt="Release" src="https://img.shields.io/github/v/release/BigPizzaV3/CodexPlusPlus">
-  <img alt="Stars" src="https://img.shields.io/github/stars/BigPizzaV3/CodexPlusPlus">
-  <img alt="License" src="https://img.shields.io/github/license/BigPizzaV3/CodexPlusPlus">
+  <img alt="Release" src="https://img.shields.io/github/v/release/eyx323539-dev/CodexPlusPlus">
+  <img alt="Stars" src="https://img.shields.io/github/stars/eyx323539-dev/CodexPlusPlus">
+  <img alt="License" src="https://img.shields.io/github/license/eyx323539-dev/CodexPlusPlus">
   <img alt="Rust" src="https://img.shields.io/badge/rust-1.85%2B-orange">
   <img alt="Tauri" src="https://img.shields.io/badge/tauri-2.x-24C8DB">
 </p>
@@ -20,11 +20,14 @@ Codex++ is an external launcher and manager for the OpenAI Codex / ChatGPT deskt
 
 ## Quick Start
 
-Download the latest installer from [GitHub Releases](https://github.com/BigPizzaV3/CodexPlusPlus/releases):
+Download the latest installer from [BRO Codex++ GitHub Releases](https://github.com/eyx323539-dev/CodexPlusPlus/releases/latest):
 
 - Windows: `CodexPlusPlus-*-windows-x64-setup.exe`
 - macOS Intel: `CodexPlusPlus-*-macos-x64.dmg`
 - macOS Apple Silicon: `CodexPlusPlus-*-macos-arm64.dmg`
+
+Current BRO customized Windows installer:
+[CodexPlusPlus-1.2.38-bro.1-windows-x64-setup.exe](https://github.com/eyx323539-dev/CodexPlusPlus/releases/latest/download/CodexPlusPlus-1.2.38-bro.1-windows-x64-setup.exe)
 
 After installation, two entry points are available:
 
@@ -36,13 +39,13 @@ For first-time setup, open the manager, verify the detected app path, configure 
 ## Sponsors
 
 <p align="center">
-  <a href="https://jojocode.com/">
-    <img src="docs/images/sponsor-jojocode.png" alt="JOJO Code" width="180">
+  <a href="https://api.skuzi.cn/">
+    <img src="docs/images/sponsor-bro-api.png" alt="BRO API Relay" width="180">
   </a>
 </p>
 <p align="center">
-  <a href="https://jojocode.com/"><strong>JOJO Code | Official Codex++ Relay</strong></a><br>
-  The official Codex++ relay service, focused on stable access and cost-effective pricing. JOJO Code supports the full GPT-5.6 family, Fable 5, Sonnet 5, GPT-5.5, GPT-5.4, Claude Opus 4.8, Claude Opus 4.7, gpt-image-2, and more for daily development, team collaboration, and long-running project workflows.
+  <a href="https://api.skuzi.cn/"><strong>BRO API Relay</strong></a><br>
+  BRO API provides stable and convenient AI API relay service for Codex, GPT, Claude, Gemini, and other common models.
 </p>
 
 <p align="center">
@@ -55,11 +58,11 @@ For first-time setup, open the manager, verify the detected app path, configure 
   </tr>
   <tr>
     <td align="center">
-      <a href="https://jojocode.com/">
-        <img src="docs/images/sponsor-jojocode.png" alt="JOJO Code" width="150">
+      <a href="https://api.skuzi.cn/">
+        <img src="docs/images/sponsor-bro-api.png" alt="BRO API Relay" width="150">
       </a>
     </td>
-    <td><a href="https://jojocode.com/"><strong>JOJO Code | Official Codex++ Relay</strong></a><br>Thanks to JOJO Code for sponsoring this project. JOJO Code is the official Codex++ relay service with cost-effective pricing and stable, easy-to-configure Codex API access. It supports the full GPT-5.6 family, Fable 5, Sonnet 5, GPT-5.5, GPT-5.4, Claude Opus 4.8, Claude Opus 4.7, gpt-image-2, and more for daily development, quick setup, team collaboration, and continuous use.</td>
+    <td><a href="https://api.skuzi.cn/"><strong>BRO API Relay</strong></a><br>BRO API provides stable and convenient AI API relay service for Codex, GPT, Claude, Gemini, and other common models.</td>
   </tr>
   <tr>
     <td align="center">
