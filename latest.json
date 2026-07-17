@@ -1,0 +1,12 @@
+﻿{
+    "version":  "v1.2.38-bro.1",
+    "tag_name":  "v1.2.38-bro.1",
+    "url":  "https://github.com/eyx323539-dev/CodexPlusPlus/releases/tag/v1.2.38-bro.1",
+    "body":  "BRO API customized release. 更新源已切换到 eyx323539-dev/CodexPlusPlus，首页广告和供应商预设已替换为 BRO API。",
+    "assets":  [
+                   {
+                       "name":  "CodexPlusPlus-1.2.38-bro.1-windows-x64-setup.exe",
+                       "browser_download_url":  "https://github.com/eyx323539-dev/CodexPlusPlus/releases/download/v1.2.38-bro.1/CodexPlusPlus-1.2.38-bro.1-windows-x64-setup.exe"
+                   }
+               ]
+}
